@@ -1,12 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.github.tony19.loggly">
+    package="com.github.tony19.loggly">
 
-  <application
-      android:allowBackup="true"
-      android:label="loggly-client"
-      android:supportsRtl="true"
-      >
+    <application
+        android:allowBackup="true"
+        android:label="loggly-client"
+        android:supportsRtl="true">
 
-  </application>
+    </application>
 
 </manifest>

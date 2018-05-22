@@ -42,13 +42,6 @@ public interface ILogglyClient{
     }
 
     /**
-     * Writes a single log event
-     * @param message log event to be written
-     * @return {@code true} if successful; {@code false} otherwise
-     */
-    boolean log(String message);
-
-    /**
      * Writes a single log event asynchronously
      * @param message message to be logged
      * @param callback callback to be invoked on completion
@@ -56,29 +49,9 @@ public interface ILogglyClient{
     void log(String message, Callback callback);
 
     /**
-     * Writes multiple log events at once
-     * @param messages log events to be written
-     * @return {@code true} if successful; {@code false} otherwise
-     */
-    boolean logBulk(String... messages);
-
-    /**
-     * Writes multiple log events at once
-     * @param messages log events to be written
-     * @return {@code true} if successful; {@code false} otherwise
-     */
-    boolean logBulk(Collection<String> messages);
-
-    /**
      * Writes multiple log events at once asynchronously
      * @param messages log events to be written
      * @param callback callback to be invoked on completion
      */
     void logBulk(Collection<String> messages, Callback callback);
-
-    /**
-     * Sets the tags to use for Loggly messages
-     * @param tags CSV or list of tags
-     */
-    void setTags(String... tags);
 }

@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2015 Anthony K. Trinh
- *
+ * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
- *         http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p>
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * <p>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -27,27 +27,10 @@ import java.io.Serializable;
 class LogglyResponse implements Serializable {
 
     /** Response value for success */
-    public static final String SUCCESS_VALUE = "ok";
-
-    /** A {@code LogglyResponse} that indicates success */
-    public static final LogglyResponse OK = new LogglyResponse(SUCCESS_VALUE);
+    private static final String SUCCESS_VALUE = "ok";
 
     /** Value of response. Assigned by deserializer. */
     private String response;
-
-    /**
-     * Constructs a blank {@code LogglyResponse}
-     */
-    public LogglyResponse() {
-    }
-
-    /**
-     * Constructs a {@code LogglyResponse} for internal testing
-     * @param text desired text value of response
-     */
-    LogglyResponse(String text) {
-        this.response = text;
-    }
 
     /**
      * Gets the text value of the response
